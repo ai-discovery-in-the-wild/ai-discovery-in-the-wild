@@ -1181,10 +1181,28 @@ footer {
   height: 100%;
 }
 
+.cfp-panel {
+  padding: 0;
+  overflow: hidden;
+}
+
+.cfp-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cfp-block {
+  padding: 30px 32px;
+}
+
+.cfp-block + .cfp-block {
+  border-left: 1px solid var(--border);
+}
+
 .template-links {
   display: grid;
   gap: 10px;
-  margin: 16px 0 20px;
+  margin: 14px 0 18px;
 }
 
 .template-link {
@@ -1224,6 +1242,15 @@ footer {
   .detail-grid-3,
   .sponsor-grid {
     grid-template-columns: 1fr;
+  }
+
+  .cfp-panel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cfp-block + .cfp-block {
+    border-left: 0;
+    border-top: 1px solid var(--border);
   }
 }
 
