@@ -980,7 +980,7 @@ h2 {
 
 .sponsor-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
   align-items: stretch;
 }
@@ -991,6 +991,7 @@ h2 {
   align-items: center;
   justify-content: center;
   height: 100%;
+  min-height: 148px;
   padding: 28px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -998,37 +999,11 @@ h2 {
   box-shadow: var(--shadow-card);
 }
 
-.sponsor-card p {
-  max-width: 42ch;
+.sponsor-status {
   color: var(--ink-3);
   font-size: 17px;
-}
-
-.sponsor-brand {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 88px;
-  margin: 0;
-  text-decoration: none;
-}
-
-.sponsor-logo-img {
-  display: block;
-  height: 38px;
-  width: auto;
-  max-width: 240px;
-  object-fit: contain;
-  object-position: center;
-}
-
-.sponsor-logo-img-databricks {
-  height: 40px;
-}
-
-.sponsor-logo-img-google {
-  height: 34px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .pc-list {
