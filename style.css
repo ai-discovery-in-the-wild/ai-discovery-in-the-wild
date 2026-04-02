@@ -815,9 +815,9 @@ h2 {
 .spk-foot {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 12px;
-  margin-top: auto;
+  margin-top: 4px;
 }
 
 .spk-link {
@@ -988,10 +988,10 @@ h2 {
 .sponsor-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  padding: 32px;
+  padding: 28px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: rgba(255, 253, 249, 0.88);
@@ -1007,9 +1007,10 @@ h2 {
 .sponsor-brand {
   display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
-  min-height: 64px;
-  margin: 14px 0 18px;
+  justify-content: center;
+  width: 100%;
+  min-height: 88px;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -1019,7 +1020,7 @@ h2 {
   width: auto;
   max-width: 240px;
   object-fit: contain;
-  object-position: left center;
+  object-position: center;
 }
 
 .sponsor-logo-img-databricks {
