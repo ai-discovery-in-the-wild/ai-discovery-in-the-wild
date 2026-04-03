@@ -1317,6 +1317,10 @@ footer {
 }
 
 @media (max-width: 620px) {
+  .nav-inner {
+    gap: 14px;
+  }
+
   .nav-toggle {
     display: flex;
   }
@@ -1329,16 +1333,18 @@ footer {
     display: none;
     position: absolute;
     top: 64px;
-    left: 0;
-    right: 0;
+    left: var(--gutter);
+    right: var(--gutter);
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
-    padding: 18px var(--gutter) 22px;
+    padding: 18px 18px 22px;
     background: rgba(248, 244, 237, 0.96);
-    border-bottom: 1px solid var(--border);
+    border: 1px solid var(--border);
+    border-radius: 18px;
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
+    box-shadow: var(--shadow-soft);
   }
 
   .nav-links.open {
