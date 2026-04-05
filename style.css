@@ -104,7 +104,7 @@ img {
 }
 
 .conference-logo-nav {
-  height: 38px;
+  height: 42px;
   max-width: 100%;
 }
 
@@ -167,18 +167,8 @@ img {
   text-align: left;
 }
 
-.hero-lockup {
-  margin-bottom: 22px;
-}
-
-.hero-lockup-copy {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.hero-lockup-label {
+.hero-kicker {
+  margin-bottom: 18px;
   color: var(--accent-deep);
   font-size: 12px;
   font-weight: 800;
@@ -186,29 +176,25 @@ img {
   text-transform: uppercase;
 }
 
-.conference-logo-hero {
-  height: 52px;
-  max-width: min(360px, 100%);
-}
-
 #hero h1 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
+  display: block;
   margin-bottom: 18px;
-  line-height: 0.98;
+  line-height: 0.96;
 }
 
 #hero h1 span {
-  font-size: clamp(52px, 8vw, 90px);
+  display: block;
+  max-width: 900px;
+  font-size: clamp(44px, 7vw, 78px);
   font-weight: 800;
   letter-spacing: -0.05em;
 }
 
 #hero h1 em {
+  display: block;
+  margin-top: 8px;
   font-family: var(--serif);
-  font-size: clamp(44px, 6.4vw, 76px);
+  font-size: clamp(38px, 5.4vw, 62px);
   font-style: italic;
   font-weight: 500;
   line-height: 1;
@@ -217,11 +203,11 @@ img {
 }
 
 .hero-tagline {
-  max-width: 700px;
+  max-width: 760px;
   margin: 0;
   color: var(--hero-muted);
-  font-size: 19px;
-  line-height: 1.65;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 .hero-actions {
@@ -1092,28 +1078,13 @@ footer {
   max-width: 860px;
 }
 
-.subpage-lockup {
-  margin-bottom: 18px;
-}
-
-.subpage-lockup-copy {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-}
-
 .subpage-kicker {
+  margin-bottom: 16px;
   color: var(--accent-deep);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-
-.conference-logo-subpage {
-  height: 48px;
-  max-width: min(340px, 100%);
 }
 
 .subpage-hero h1 {
@@ -1228,6 +1199,37 @@ footer {
 }
 
 @media (max-width: 1080px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: var(--gutter);
+    right: var(--gutter);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 18px 22px;
+    background: rgba(248, 244, 237, 0.96);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: var(--ink) !important;
+    font-size: 14px;
+  }
+
   #hero {
     min-height: auto;
     padding: 140px 0 88px;
@@ -1261,6 +1263,10 @@ footer {
 @media (max-width: 860px) {
   #navbar {
     height: 64px;
+  }
+
+  .nav-links {
+    top: 64px;
   }
 
   #hero {
@@ -1334,39 +1340,8 @@ footer {
     gap: 14px;
   }
 
-  .nav-toggle {
-    display: flex;
-  }
-
   .conference-logo-nav {
     height: 34px;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 64px;
-    left: var(--gutter);
-    right: var(--gutter);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 18px 18px 22px;
-    background: rgba(248, 244, 237, 0.96);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    box-shadow: var(--shadow-soft);
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-links a {
-    color: var(--ink) !important;
-    font-size: 14px;
   }
 
   #hero {
@@ -1374,25 +1349,15 @@ footer {
   }
 
   #hero h1 span {
-    font-size: clamp(52px, 16vw, 72px);
+    font-size: clamp(40px, 14vw, 64px);
   }
 
   #hero h1 em {
-    font-size: clamp(50px, 15vw, 68px);
+    font-size: clamp(36px, 13vw, 56px);
   }
 
   .hero-tagline {
     font-size: 17px;
-  }
-
-  .hero-lockup,
-  .subpage-lockup {
-    align-items: flex-start;
-  }
-
-  .conference-logo-hero,
-  .conference-logo-subpage {
-    height: 42px;
   }
 
   .hero-meta {
