@@ -385,6 +385,7 @@ h2 {
 
 .cfp-panels {
   grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
 }
 
 .cfp-panel {
@@ -446,6 +447,7 @@ h2 {
 
 .policy-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
 }
 
 .clean-list {
@@ -605,6 +607,27 @@ h2 {
   border-top: 1px solid var(--border);
   color: var(--ink-3);
   font-size: 17px;
+}
+
+.support-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.support-note {
+  max-width: 760px;
+  color: var(--ink-3);
+  font-size: 16px;
+}
+
+.support-note a {
+  color: var(--accent-deep);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.support-note a:hover {
+  text-decoration: underline;
 }
 
 footer {
