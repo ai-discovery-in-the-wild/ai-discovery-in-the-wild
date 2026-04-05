@@ -163,10 +163,14 @@ img {
 }
 
 #hero h1 em {
+  display: inline-block;
+  padding-right: 0.08em;
   font-family: var(--serif);
   font-style: italic;
   font-weight: 500;
-  background: linear-gradient(90deg, #0b4a35 0%, #3d6a43 42%, #6a5220 72%, #6b0102 100%);
+  background: linear-gradient(90deg, #0b4a35 0%, #2f6a4d 46%, #6b0102 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
