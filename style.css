@@ -377,6 +377,54 @@ h2 {
   gap: 24px;
 }
 
+.cfp-dates {
+  display: grid;
+  gap: 14px;
+  padding-top: 10px;
+}
+
+.cfp-dates-title {
+  color: var(--ink-4);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cfp-dates-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cfp-date-item {
+  padding: 18px 18px 18px 0;
+  border-right: 1px solid var(--border);
+}
+
+.cfp-date-item:last-child {
+  border-right: 0;
+}
+
+.cfp-date-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--ink-4);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.cfp-date-item strong {
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
 .cfp-summary {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -707,6 +755,7 @@ footer {
   .topic-list,
   .committee-list,
   .overview-points,
+  .cfp-dates-grid,
   .cfp-summary,
   .dates-grid {
     grid-template-columns: 1fr 1fr;
@@ -742,6 +791,7 @@ footer {
   .speaker-grid,
   .committee-list,
   .overview-points,
+  .cfp-dates-grid,
   .cfp-summary,
   .cfp-text-grid,
   .dates-grid {
@@ -758,6 +808,16 @@ footer {
     padding: 18px 0;
     border-top: 1px solid var(--border);
     border-right: 0;
+  }
+
+  .cfp-date-item {
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+    border-right: 0;
+  }
+
+  .cfp-date-item:first-child {
+    border-top: 0;
   }
 
   .rule-row {
