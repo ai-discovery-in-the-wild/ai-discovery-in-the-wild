@@ -315,8 +315,7 @@ h2 {
 }
 
 .overview-points,
-.policy-grid,
-.cfp-panels {
+.cfp-columns {
   display: grid;
   gap: 28px;
 }
@@ -332,7 +331,6 @@ h2 {
 
 .inline-point h3,
 .topic-list h3,
-.policy-grid h3,
 .committee-block h3 {
   font-size: 22px;
   line-height: 1.16;
@@ -383,9 +381,17 @@ h2 {
   gap: 24px;
 }
 
-.cfp-panels {
+.cfp-columns {
+  display: grid;
   grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
   align-items: start;
+  gap: 24px;
+}
+
+.cfp-column-stack {
+  display: grid;
+  gap: 24px;
+  align-content: start;
 }
 
 .cfp-panel {
@@ -443,11 +449,6 @@ h2 {
 .footer-link:hover,
 .redirect-shell a:hover {
   text-decoration: underline;
-}
-
-.policy-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
 }
 
 .clean-list {
@@ -722,8 +723,7 @@ footer {
   .topic-list,
   .committee-list,
   .overview-points,
-  .policy-grid,
-  .cfp-panels,
+  .cfp-columns,
   .dates-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -763,8 +763,7 @@ footer {
   .speaker-grid,
   .committee-list,
   .overview-points,
-  .policy-grid,
-  .cfp-panels,
+  .cfp-columns,
   .dates-grid {
     grid-template-columns: 1fr;
   }
