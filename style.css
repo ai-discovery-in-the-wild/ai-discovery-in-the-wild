@@ -143,7 +143,7 @@ img {
 
 .hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
+  grid-template-columns: minmax(0, 1fr) 240px;
   gap: 40px;
   align-items: start;
   max-width: 1120px;
@@ -225,9 +225,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 225px;
-  min-height: 225px;
-  margin-top: 2px;
+  width: 240px;
+  min-height: 240px;
+  margin-top: 4px;
   color: rgba(23, 20, 16, 0.92);
 }
 
@@ -869,8 +869,8 @@ footer {
   }
 
   .hero-mark {
-    width: 180px;
-    min-height: 180px;
+    width: 192px;
+    min-height: 192px;
     margin-top: 0;
   }
 }
