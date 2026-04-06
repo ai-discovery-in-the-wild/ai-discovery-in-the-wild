@@ -402,24 +402,10 @@ h2 {
 
 .cfp-shell {
   display: grid;
-  gap: 28px;
+  gap: 24px;
   max-width: 1040px;
 }
 
-.cfp-dates {
-  display: grid;
-  gap: 14px;
-  padding-top: 8px;
-}
-
-.cfp-dates-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 18px;
-}
-
-.cfp-dates-head h3,
 .support-card h3 {
   font-size: 22px;
   line-height: 1.16;
@@ -427,7 +413,77 @@ h2 {
   font-weight: 800;
 }
 
-.cfp-dates-head p {
+.cfp-portal {
+  display: grid;
+  gap: 18px;
+  padding: 28px;
+  background: var(--panel-strong);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+}
+
+.cfp-portal-copy {
+  max-width: 620px;
+}
+
+.cfp-eyebrow {
+  color: var(--ink-4);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cfp-portal h3 {
+  margin-top: 10px;
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+  max-width: 580px;
+}
+
+.cfp-portal p:last-child {
+  margin-top: 12px;
+  color: var(--ink-3);
+  max-width: 760px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.cfp-portal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.portal-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 58px;
+  min-width: 300px;
+  padding: 0 24px;
+  border-radius: 16px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.cfp-dates {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.cfp-dates-note {
   color: var(--ink-4);
   font-size: 14px;
 }
@@ -436,18 +492,20 @@ h2 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
-  background: var(--panel);
+  background: rgba(250, 249, 245, 0.9);
   border: 1px solid var(--border-soft);
   border-radius: 16px;
   overflow: hidden;
 }
 
 .cfp-date-item {
-  padding: 18px 22px;
+  padding: 18px 20px;
   border-left: 1px solid var(--border-soft);
 }
 
-.cfp-date-item:first-child { border-left: 0; }
+.cfp-date-item:first-child {
+  border-left: 0;
+}
 
 .cfp-date-label {
   display: block;
@@ -462,8 +520,8 @@ h2 {
 .cfp-date-item strong {
   color: var(--ink);
   font-size: 19px;
-  font-weight: 700;
-  line-height: 1.35;
+  font-weight: 800;
+  line-height: 1.25;
 }
 
 .detail-list a,
@@ -490,13 +548,20 @@ h2 {
   font-weight: 800;
 }
 
+.cfp-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 24px;
+}
+
 .cfp-pane {
   display: grid;
   gap: 12px;
-}
-
-.cfp-pane-main {
-  max-width: 880px;
+  min-height: 100%;
+  padding: 24px 26px;
+  background: var(--panel);
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
 }
 
 .detail-list,
@@ -528,47 +593,6 @@ h2 {
   height: 5px;
   border-radius: 50%;
   background: var(--accent);
-}
-
-.policy-section {
-  display: grid;
-  gap: 14px;
-  padding-top: 4px;
-}
-
-.policy-section h3,
-.policy-item h4 {
-  font-size: 22px;
-  line-height: 1.16;
-  letter-spacing: -0.03em;
-  font-weight: 800;
-}
-
-.policy-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px 28px;
-  padding-top: 2px;
-}
-
-.policy-item {
-  min-height: 100%;
-  padding: 16px 18px;
-  background: var(--panel);
-  border: 1px solid var(--border-soft);
-  border-radius: 14px;
-}
-
-.policy-item h4 {
-  font-size: 16px;
-  letter-spacing: -0.02em;
-}
-
-.policy-item p {
-  margin-top: 8px;
-  color: var(--ink-3);
-  font-size: 15px;
-  line-height: 1.65;
 }
 
 .committee-block {
@@ -804,6 +828,7 @@ footer {
   .topic-list,
   .committee-list,
   .overview-points,
+  .cfp-grid,
   .cfp-dates-grid,
   .dates-grid {
     grid-template-columns: 1fr 1fr;
@@ -839,8 +864,8 @@ footer {
   .speaker-grid,
   .committee-list,
   .overview-points,
+  .cfp-grid,
   .cfp-dates-grid,
-  .policy-grid,
   .dates-grid {
     grid-template-columns: 1fr;
   }
@@ -857,14 +882,23 @@ footer {
     border-left: 0;
   }
 
-  .cfp-dates-head {
-    display: grid;
-    gap: 4px;
+  .cfp-portal {
+    padding: 24px 22px;
+  }
+
+  .cfp-portal-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .portal-status {
+    width: 100%;
+    min-width: 0;
   }
 
   .cfp-date-item {
-    padding: 16px 0;
-    border-top: 1px solid var(--border);
+    padding: 16px 18px;
+    border-top: 1px solid var(--border-soft);
     border-left: 0;
   }
 
